@@ -14,18 +14,18 @@ const DrawGame = () =>{
      msg.innerText="Game was Drawn, Play Again"
      msg.style.backgroundColor="blue"
 }
-const showWinner=(userWin=>{
+const showWinner=(userWin, userChoice, compChoice)=>{
     if(userWin){
         console.log("You Win")
-        msg.innerText="You Win"
+        msg.innerText=`You Win! ${userChoice} beats ${compChoice}`
         msg.style.backgroundColor="green"
     }
     else {
         console.log("You Loose")
-        msg.innerText="You Loose"
+        msg.innerText=`You Loose ${compChoice} beats ${userChoice}`
         msg.style.backgroundColor="red"
     }
-})
+}
 const playGame = (userChoice) => {
     console.log("user choice = ", userChoice);
     // Generate computer choice
@@ -47,7 +47,7 @@ const playGame = (userChoice) => {
         else {
             userWin=compChoice=="rock"?false:true
         }
-        showWinner(userWin)
+        showWinner(userWin,userChoice,compChoice)
     }
 };
 
