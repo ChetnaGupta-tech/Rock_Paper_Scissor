@@ -17,12 +17,12 @@ const DrawGame = () =>{
 const showWinner=(userWin, userChoice, compChoice)=>{
     if(userWin){
         console.log("You Win")
-        msg.innerText=`You Win! ${userChoice} beats ${compChoice}`
+        msg.innerText=`You Win! Your ${userChoice} beats Computer's ${compChoice}`
         msg.style.backgroundColor="green"
     }
     else {
         console.log("You Loose")
-        msg.innerText=`You Loose ${compChoice} beats ${userChoice}`
+        msg.innerText=`You Loose Computer's ${compChoice} beats Your ${userChoice}`
         msg.style.backgroundColor="red"
     }
 }
