@@ -8,11 +8,20 @@ const genCompChoice = () => {
     return options[ranIdx]; 
 };
 
+const DrawGame = () =>{
+    console.log("Game was Drawn")
+}
+
 const playGame = (userChoice) => {
     console.log("user choice = ", userChoice);
     // Generate computer choice
     const compChoice = genCompChoice();
     console.log("comp choice = ", compChoice);
+
+    if(userChoice==compChoice){
+        //Draw
+        DrawGame()
+    }
 };
 
 choices.forEach((choice) => {
