@@ -12,15 +12,18 @@ const genCompChoice = () => {
 const DrawGame = () =>{
     console.log("Game was Drawn")
      msg.innerText="Game was Drawn, Play Again"
+     msg.style.backgroundColor="blue"
 }
 const showWinner=(userWin=>{
     if(userWin){
         console.log("You Win")
         msg.innerText="You Win"
+        msg.style.backgroundColor="green"
     }
     else {
         console.log("You Loose")
         msg.innerText="You Loose"
+        msg.style.backgroundColor="red"
     }
 })
 const playGame = (userChoice) => {
